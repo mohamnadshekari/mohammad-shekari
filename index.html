@@ -150,7 +150,7 @@ body[data-theme="classic"]{--theme-accent:#c6ad70;--theme-glow:#c6ad7055;backgro
 <path class="base" d="M540 1050V930L620 850V640H790L875 555V380H1040L1120 300V0"/><path class="flow b" d="M540 1050V930L620 850V640H790L875 555V380H1040L1120 300V0"/>
 <path class="base" d="M1020 1050V975L945 900V805H765L690 730V525H495L420 450V300"/><path class="flow d" d="M1020 1050V975L945 900V805H765L690 730V525H495L420 450V300"/>
 <circle class="node" cx="245" cy="215" r="5"/><circle class="node live" cx="245" cy="215" r="2.8"/><circle class="node" cx="690" cy="185" r="5"/><circle class="node live" cx="690" cy="185" r="2.8"/><circle class="node" cx="785" cy="790" r="5"/><circle class="node live" cx="785" cy="790" r="2.8"/><circle class="node" cx="1360" cy="220" r="5"/><circle class="node live" cx="1360" cy="220" r="2.8"/></svg></div><div class="grain"></div>
-<header class="nav"><a class="brand" href="#home"><span class="mark"><i></i></span>Mohammad Shekari</a><div class="themePicker" role="group" aria-label="انتخاب تم سایت"><button type="button" class="themeDot active" data-theme="dark" aria-label="تم زغالی اصلی" title="زغالی"></button><button type="button" class="themeDot" data-theme="plum" aria-label="تم بادمجانی تیره" title="بادمجانی"></button><button type="button" class="themeDot" data-theme="light" aria-label="تم سفید" title="سفید"></button><button type="button" class="themeDot" data-theme="classic" aria-label="تم کلاسیک سرمه‌ای و طلایی" title="کلاسیک"></button></div><nav class="links"><a href="#about-fa">About</a><a href="#videos">Videos</a><a href="#plc">PLC</a><a href="#rtu">RTU</a><a href="#devops">DevOps</a><a href="#security">Security</a></nav><div class="status"><i></i>system concept · online <span class="versionTag">SITE v1.3.0</span></div></header>
+<header class="nav"><a class="brand" href="#home"><span class="mark"><i></i></span>Mohammad Shekari</a><div class="themePicker" role="group" aria-label="انتخاب تم سایت"><button type="button" class="themeDot active" data-theme="dark" aria-label="تم زغالی اصلی" title="زغالی"></button><button type="button" class="themeDot" data-theme="plum" aria-label="تم بادمجانی تیره" title="بادمجانی"></button><button type="button" class="themeDot" data-theme="light" aria-label="تم سفید" title="سفید"></button><button type="button" class="themeDot" data-theme="classic" aria-label="تم کلاسیک سرمه‌ای و طلایی" title="کلاسیک"></button></div><nav class="links"><a href="#about-fa">About</a><a href="#videos">Videos</a><a href="#plc">PLC</a><a href="#rtu">RTU</a><a href="#devops">DevOps</a><a href="#security">Security</a></nav><div class="status"><i></i>system concept · online <span class="versionTag">SITE v1.4.0</span></div></header>
 <main id="home">
 <section class="hero"><div class="container heroGrid"><div><div class="eyebrow"><i></i>Industrial Automation · OT Security · DevOps</div><h1>Mohammad<br><span>Shekari.</span></h1><p>Civil Engineering background, focused on <strong>PLC, RTU, HMI/SCADA, industrial networking and OT security</strong>, supported by Python, Linux, Docker and CI/CD.</p><div class="actions"><a class="btn" href="#mission">Enter the project ↘</a><a class="btn" href="#contact">Contact</a></div><a class="mammadTeaser" href="#mammad" aria-label="من ربات ممدم؛ برو روشنم کن"><span class="teaserBot" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 8v7M27 8h10"/><rect x="12" y="16" width="40" height="32" rx="10"/><path d="M19 48v5m26-5v5M12 29H6m46 0h6"/><circle cx="24" cy="30" r="4"/><circle cx="40" cy="30" r="4"/><path d="M24 39q8 6 16 0"/></svg><i></i></span><span class="teaserLabel"><b>ربات ممدم</b><small>من ربات ممدم؛ برو روشنم کن</small></span><span class="teaserArrow" aria-hidden="true">↘</span></a></div><div class="profileStage"><div class="orbit"><div class="profile" aria-label="Portrait of Mohammad Shekari"><img class="profilePhoto" src="assets/profile-mohammad.png" alt="محمد شکاری" draggable="false" loading="eager" decoding="async"></div><div class="profileNote">RTU · PLC · OT Security</div></div></div></div></section>
 <section class="persianIntro" id="about-fa" lang="fa" dir="rtl" aria-labelledby="aboutFaTitle">
@@ -355,5 +355,46 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 </script>
 <!-- PRIVATE ANALYTICS SETUP: replace the placeholder with your own Umami Website ID after creating an account. The dashboard remains private behind your Umami account login. -->
 <script defer src="https://cloud.umami.is/script.js" data-website-id="REPLACE_WITH_YOUR_UMAMI_WEBSITE_ID" id="umami-analytics"></script>
+
+
+<style id="mammad-magic-trail-style">
+#mammadMagicTrail{position:fixed;inset:0;width:100%;height:100%;z-index:9998;pointer-events:none;opacity:0;transition:opacity 1.2s ease;contain:strict}
+@media(prefers-reduced-motion:reduce){#mammadMagicTrail{display:none!important}}
+</style>
+<script id="mammad-magic-trail">
+(()=>{
+ const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(reduce)return;
+ const canvas=document.createElement('canvas');canvas.id='mammadMagicTrail';canvas.setAttribute('aria-hidden','true');document.body.appendChild(canvas);
+ const ctx=canvas.getContext('2d',{alpha:true});if(!ctx)return;
+ let w=0,h=0,dpr=1,active=false,visible=false,lastActivity=Date.now(),fade=0,tx=0,ty=0,x=0,y=0,started=0,lastFrame=0,particles=[];
+ const rand=(a,b)=>a+Math.random()*(b-a);
+ function resize(){dpr=Math.min(window.devicePixelRatio||1,2);w=innerWidth;h=innerHeight;canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);canvas.style.width=w+'px';canvas.style.height=h+'px';ctx.setTransform(dpr,0,0,dpr,0,0)}
+ function accent(){const c=getComputedStyle(document.body).getPropertyValue('--theme-accent').trim();return c||'#c9a064'}
+ function rgb(hex,a){let c=hex.replace('#','').trim();if(c.length===3)c=c.split('').map(v=>v+v).join('');if(!/^[0-9a-fA-F]{6}$/.test(c))c='c9a064';return `rgba(${parseInt(c.slice(0,2),16)},${parseInt(c.slice(2,4),16)},${parseInt(c.slice(4,6),16)},${a})`}
+ function wake(){lastActivity=Date.now();if(active){visible=true;canvas.style.opacity='1'}}
+ function setTarget(px,py){wake();if(!active){active=true;x=tx=px;y=ty=py;started=performance.now();particles=[];for(let i=0;i<28;i++)spawn(true)}else{tx=px;ty=py;for(let i=0;i<18;i++)spawn(true)}visible=true;canvas.style.opacity='1'}
+ function spawn(initial=false){const a=rand(0,Math.PI*2),r=initial?rand(3,35):rand(12,32);particles.push({x:x+Math.cos(a)*r,y:y+Math.sin(a)*r,vx:Math.cos(a)*rand(.08,.55),vy:Math.sin(a)*rand(.08,.55)-rand(.05,.25),life:rand(38,100),max:100,size:rand(.6,2.1),phase:rand(0,6.28)})}
+ function draw(now){requestAnimationFrame(draw);if(!ctx)return;const dt=Math.min(2,(now-(lastFrame||now))/16.67);lastFrame=now;ctx.clearRect(0,0,w,h);
+  const idle=Date.now()-lastActivity;fade=idle>60000?Math.max(0,fade-dt*.025):Math.min(1,fade+dt*.04);if(idle>60000&&fade<=0){visible=false;active=false;particles=[];canvas.style.opacity='0';return}
+  if(!active||fade<=0)return;x+=(tx-x)*Math.min(1,.085*dt);y+=(ty-y)*Math.min(1,.085*dt);
+  const color=accent(),pulse=.7+.3*Math.sin(now/700);ctx.save();ctx.globalCompositeOperation='lighter';ctx.lineCap='round';
+  // Soft, tapered magical ribbon: two elegant curved strands with fading ends.
+  for(let strand=0;strand<3;strand++){
+   const len= strand===0?46:strand===1?31:21, amp=strand===0?13:strand===1?8:5;
+   const grad=ctx.createLinearGradient(x-len,y-amp,x+len,y+amp);grad.addColorStop(0,rgb(color,0));grad.addColorStop(.23,rgb(color,.12*fade));grad.addColorStop(.5,rgb(color,(strand===0?.48:.2)*fade*pulse));grad.addColorStop(.78,rgb(color,.1*fade));grad.addColorStop(1,rgb(color,0));
+   ctx.beginPath();ctx.moveTo(x-len,y+Math.sin(now/800+strand)*amp);ctx.quadraticCurveTo(x+Math.sin(now/650+strand)*amp*1.8,y+Math.cos(now/900+strand)*amp*1.5,x+len,y+Math.sin(now/700+strand+1)*amp);ctx.strokeStyle=grad;ctx.lineWidth=strand===0?1.8:1;ctx.shadowBlur=strand===0?14:8;ctx.shadowColor=rgb(color,.65*fade);ctx.stroke();
+  }
+  // Small sparks orbit the ends and drift away before dissolving.
+  if(Math.random()<.42&&particles.length<85)spawn();
+  for(let i=particles.length-1;i>=0;i--){const p=particles[i];p.x+=p.vx*dt+(x-p.x)*.001*dt;p.y+=p.vy*dt+(y-p.y)*.001*dt;p.life-=dt;p.phase+=.08*dt;const alpha=Math.max(0,p.life/p.max)*fade*(.55+.45*Math.sin(p.phase));ctx.beginPath();ctx.arc(p.x,p.y,p.size*(.7+.3*Math.sin(p.phase)),0,Math.PI*2);ctx.fillStyle=rgb(color,alpha);ctx.shadowBlur=7;ctx.shadowColor=rgb(color,alpha);ctx.fill();if(p.life<=0)particles.splice(i,1)}
+  // Tiny halo at the point of attention, intentionally subtle.
+  const halo=ctx.createRadialGradient(x,y,0,x,y,22);halo.addColorStop(0,rgb(color,.12*fade*pulse));halo.addColorStop(1,rgb(color,0));ctx.fillStyle=halo;ctx.beginPath();ctx.arc(x,y,22,0,Math.PI*2);ctx.fill();ctx.restore();
+ }
+ window.addEventListener('resize',resize,{passive:true});resize();
+ document.addEventListener('click',e=>{if(e.button!==0)return;setTarget(e.clientX,e.clientY)},{capture:true});
+ document.addEventListener('pointermove',()=>{wake()},{passive:true});document.addEventListener('scroll',wake,{passive:true});document.addEventListener('keydown',wake,{passive:true});document.addEventListener('touchstart',wake,{passive:true});
+ requestAnimationFrame(draw);
+})();
+</script>
 
 </body></html>

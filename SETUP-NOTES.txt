@@ -25,3 +25,8 @@
 
 ویدئوها:
 ZIP مبنا شامل فایل‌های MP4 نبود؛ اگر ویدئوها در سایت آنلاین فعلی وجود دارند، هنگام جایگزینی فایل‌ها پوشه ویدئوهای موجود را حذف نکن.
+
+
+SITE v1.4.0 UPDATE
+- Added a subtle magical click trail. It appears only after the first click, smoothly moves to subsequent click locations, uses the active theme accent, emits small fading particles, and fades away after 60 seconds without user activity. It respects reduced-motion preferences.
+- Analytics is still inactive until the placeholder REPLACE_WITH_YOUR_UMAMI_WEBSITE_ID in index.html is replaced with the Website ID from your Umami Cloud dashboard. Never share your Umami password.
