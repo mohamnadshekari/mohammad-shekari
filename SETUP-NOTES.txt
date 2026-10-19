@@ -8,17 +8,17 @@
 - شماره نسخه سایت به 1.3.0 و نسخه ربات به 1.3.1 افزایش یافته است.
 
 آمار بازدید خصوصی — نیازمند یک مرحله راه‌اندازی:
-آمار واقعی را نمی‌توان فقط با HTML و بدون حساب سرویس آمار فعال کرد. این نسخه جای اتصال Umami Cloud را دارد، اما شناسه وب‌سایت هنوز وارد نشده؛ بنابراین آمار هنوز فعال نیست.
+آمار واقعی را نمی‌توان فقط با HTML و بدون حساب سرویس آمار فعال کرد. شناسه واقعی Umami Cloud وارد شده است؛ پس از انتشار سایت، پنل Umami را بررسی کن تا مطمئن شوی بازدیدها ثبت می‌شوند.
 
 مراحل ساده:
 1. وارد https://cloud.umami.is/ شو و یک حساب بساز.
 2. داخل پنل Umami، یک Website اضافه کن و آدرس GitHub Pages سایتت را وارد کن.
 3. از تنظیمات Website، شناسه (Website ID) را کپی کن.
-4. در فایل index.html عبارت REPLACE_WITH_YOUR_UMAMI_WEBSITE_ID را پیدا کن و فقط همان عبارت را با شناسه واقعی جایگزین کن.
+4. شناسه در فایل index.html قرار داده شده است؛ نیازی به جایگزینی دستی نیست.
 5. فایل را در GitHub منتشر کن. از پنل Umami با ورود به حساب خودت می‌توانی بازدید روزانه، بازدیدکنندگان یکتا، صفحات پربازدید و منبع ورودی مثل Instagram را ببینی. کاربران سایت به داشبورد خصوصی تو دسترسی ندارند.
 6. برای سنجش اینستاگرام، لینک بیو را با پارامتر UTM تنظیم کن؛ نمونه: https://YOUR-SITE-URL/?utm_source=instagram&utm_medium=social&utm_campaign=bio
 
-نکته: تا وقتی Website ID واقعی وارد نشده، نباید انتظار آمار واقعی داشت. اگر شناسه را برای من بفرستی، می‌توانم آن را در فایل قرار دهم. شناسه عمومی وب‌سایت محرمانه نیست؛ رمز عبور حساب Umami را هرگز ارسال نکن.
+نکته: شناسه در کد قرار گرفته است، اما ثبت واقعی آمار باید پس از انتشار از داخل داشبورد بررسی شود. شناسه عمومی وب‌سایت محرمانه نیست؛ رمز عبور حساب Umami را هرگز ارسال نکن.
 
 فرم ایمیل:
 فرم پیام همچنان از FormSubmit استفاده می‌کند. باید سایت از GitHub Pages باز شود و ممکن است ارسال نخست نیاز به تأیید ایمیل داشته باشد. پس از انتشار، ارسال آزمایشی انجام بده.
@@ -27,6 +27,14 @@
 ZIP مبنا شامل فایل‌های MP4 نبود؛ اگر ویدئوها در سایت آنلاین فعلی وجود دارند، هنگام جایگزینی فایل‌ها پوشه ویدئوهای موجود را حذف نکن.
 
 
-SITE v1.4.0 UPDATE
+SITE v1.4.1 UPDATE
 - Added a subtle magical click trail. It appears only after the first click, smoothly moves to subsequent click locations, uses the active theme accent, emits small fading particles, and fades away after 60 seconds without user activity. It respects reduced-motion preferences.
-- Analytics is still inactive until the placeholder REPLACE_WITH_YOUR_UMAMI_WEBSITE_ID in index.html is replaced with the Website ID from your Umami Cloud dashboard. Never share your Umami password.
+- The user-provided Umami Website ID has been inserted. Verify actual tracking in the Umami dashboard after deployment; never share your Umami password.
+
+
+SITE v1.4.1 CHANGES
+- Magic click trail excluded from robot interactions.
+- Trail fades after 30 seconds without activity.
+- Trail glow stretches in the direction of movement and rounds back when still.
+- Plum theme darkened to near-black aubergine.
+- Head-pat dialogue adds an affectionate “ممدم، دوست دارم، دوست دارم!” line.
