@@ -1,31 +1,27 @@
-Portfolio update notes
-======================
+راهنمای نسخه 1.3.0 پورتفولیوی محمد شکاری
 
-This revision keeps the existing portfolio and updates only the Mammad interaction area.
+تغییرات این نسخه:
+- چهار تم قابل انتخاب با دایره‌های کوچک نورانی در نوار بالای سایت: زغالی اصلی، بادمجانی تیره، سفید و کلاسیک سرمه‌ای/طلایی.
+- انتخاب تم در همان مرورگر ذخیره می‌شود و با بازدید دوباره باقی می‌ماند.
+- نام «ربات ممدم» و متن دعوت به تعامل در کنار آیکون بالای صفحه، برای موبایل و دسکتاپ نمایش داده می‌شود.
+- بخش «نمونه‌کارهای آینده» در انتهای سایت با سه کارت رزروشده برای PLC/HMI، RTU و Python اضافه شده است.
+- شماره نسخه سایت به 1.3.0 و نسخه ربات به 1.3.1 افزایش یافته است.
 
-Mammad interaction
-------------------
-- The hero now shows only a small clickable robot icon. Its tooltip says: «من ربات ممدم؛ برو روشنم کن».
-- The actual robot is at the bottom of the page and is explicitly the interaction target.
-- Touch/click the robot's head to soothe it; touch/click its torso to trigger a hurt reaction. Repeated hits trigger stronger, personality-specific responses.
-- Visitors can switch among 12 robot personalities. The personality changes the robot's short reactions.
-- There are separate random lines, multiple-choice questions about Mohammad, written questions about Mohammad, and a direct message path.
-- Multiple-choice answers advance automatically. Written answers advance after the visitor submits each answer.
-- Survey responses are collected into an ordered email payload for Mohammad.
-- A visitor nickname can be saved in localStorage on the same browser/device. It is not synced across devices or browsers and can be cleared by the visitor's browser settings.
+آمار بازدید خصوصی — نیازمند یک مرحله راه‌اندازی:
+آمار واقعی را نمی‌توان فقط با HTML و بدون حساب سرویس آمار فعال کرد. این نسخه جای اتصال Umami Cloud را دارد، اما شناسه وب‌سایت هنوز وارد نشده؛ بنابراین آمار هنوز فعال نیست.
 
-Email delivery
---------------
-- The form uses FormSubmit and the contact address already used on the portfolio.
-- The recipient may need to activate the form by following FormSubmit's first-use email confirmation. Delivery has not been verified from this local file; test it after publishing.
-- A successful local button click alone does not prove that an email was delivered.
+مراحل ساده:
+1. وارد https://cloud.umami.is/ شو و یک حساب بساز.
+2. داخل پنل Umami، یک Website اضافه کن و آدرس GitHub Pages سایتت را وارد کن.
+3. از تنظیمات Website، شناسه (Website ID) را کپی کن.
+4. در فایل index.html عبارت REPLACE_WITH_YOUR_UMAMI_WEBSITE_ID را پیدا کن و فقط همان عبارت را با شناسه واقعی جایگزین کن.
+5. فایل را در GitHub منتشر کن. از پنل Umami با ورود به حساب خودت می‌توانی بازدید روزانه، بازدیدکنندگان یکتا، صفحات پربازدید و منبع ورودی مثل Instagram را ببینی. کاربران سایت به داشبورد خصوصی تو دسترسی ندارند.
+6. برای سنجش اینستاگرام، لینک بیو را با پارامتر UTM تنظیم کن؛ نمونه: https://YOUR-SITE-URL/?utm_source=instagram&utm_medium=social&utm_campaign=bio
 
-Private visitor analytics
--------------------------
-- Analytics are not active in this archive. No analytics provider account or site ID was supplied.
-- To count daily visitors privately, connect a provider such as Umami Cloud and keep its dashboard login private. GitHub Pages cannot securely hide an admin dashboard embedded in public HTML.
-- Instagram source traffic can be measured with a dedicated UTM-tagged bio link, but website analytics cannot identify visitors' Instagram usernames just because they came from Instagram.
+نکته: تا وقتی Website ID واقعی وارد نشده، نباید انتظار آمار واقعی داشت. اگر شناسه را برای من بفرستی، می‌توانم آن را در فایل قرار دهم. شناسه عمومی وب‌سایت محرمانه نیست؛ رمز عبور حساب Umami را هرگز ارسال نکن.
 
-Videos
-------
-- This archive contains the assets that were present in the supplied ZIP. The three MP4 files were not included in that ZIP; add the original videos to assets/videos if needed.
+فرم ایمیل:
+فرم پیام همچنان از FormSubmit استفاده می‌کند. باید سایت از GitHub Pages باز شود و ممکن است ارسال نخست نیاز به تأیید ایمیل داشته باشد. پس از انتشار، ارسال آزمایشی انجام بده.
+
+ویدئوها:
+ZIP مبنا شامل فایل‌های MP4 نبود؛ اگر ویدئوها در سایت آنلاین فعلی وجود دارند، هنگام جایگزینی فایل‌ها پوشه ویدئوهای موجود را حذف نکن.
