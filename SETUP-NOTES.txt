@@ -1,0 +1,31 @@
+Portfolio update notes
+======================
+
+This revision keeps the existing portfolio and updates only the Mammad interaction area.
+
+Mammad interaction
+------------------
+- The hero now shows only a small clickable robot icon. Its tooltip says: «من ربات ممدم؛ برو روشنم کن».
+- The actual robot is at the bottom of the page and is explicitly the interaction target.
+- Touch/click the robot's head to soothe it; touch/click its torso to trigger a hurt reaction. Repeated hits trigger stronger, personality-specific responses.
+- Visitors can switch among 12 robot personalities. The personality changes the robot's short reactions.
+- There are separate random lines, multiple-choice questions about Mohammad, written questions about Mohammad, and a direct message path.
+- Multiple-choice answers advance automatically. Written answers advance after the visitor submits each answer.
+- Survey responses are collected into an ordered email payload for Mohammad.
+- A visitor nickname can be saved in localStorage on the same browser/device. It is not synced across devices or browsers and can be cleared by the visitor's browser settings.
+
+Email delivery
+--------------
+- The form uses FormSubmit and the contact address already used on the portfolio.
+- The recipient may need to activate the form by following FormSubmit's first-use email confirmation. Delivery has not been verified from this local file; test it after publishing.
+- A successful local button click alone does not prove that an email was delivered.
+
+Private visitor analytics
+-------------------------
+- Analytics are not active in this archive. No analytics provider account or site ID was supplied.
+- To count daily visitors privately, connect a provider such as Umami Cloud and keep its dashboard login private. GitHub Pages cannot securely hide an admin dashboard embedded in public HTML.
+- Instagram source traffic can be measured with a dedicated UTM-tagged bio link, but website analytics cannot identify visitors' Instagram usernames just because they came from Instagram.
+
+Videos
+------
+- This archive contains the assets that were present in the supplied ZIP. The three MP4 files were not included in that ZIP; add the original videos to assets/videos if needed.
